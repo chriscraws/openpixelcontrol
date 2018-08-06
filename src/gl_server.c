@@ -367,8 +367,8 @@ void load_layout(char* filename, int channel) {
       shapes[num_shapes].draw = draw_point;
       shapes[num_shapes].index = channel_offsets[channel] + i;
       shapes[num_shapes].g.point.x = x->valuedouble;
-      shapes[num_shapes].g.point.y = x->next->valuedouble;
-      shapes[num_shapes].g.point.z = x->next->next->valuedouble;
+      shapes[num_shapes].g.point.z = x->next->valuedouble;
+      shapes[num_shapes].g.point.y = x->next->next->valuedouble;
       num_shapes++;
       shape_count++;
     }
@@ -380,11 +380,11 @@ void load_layout(char* filename, int channel) {
       shapes[num_shapes].draw = draw_line;
       shapes[num_shapes].index = channel_offsets[channel] + i;
       shapes[num_shapes].g.line.start.x = x->valuedouble;
-      shapes[num_shapes].g.line.start.y = x->next->valuedouble;
-      shapes[num_shapes].g.line.start.z = x->next->next->valuedouble;
+      shapes[num_shapes].g.line.start.z = x->next->valuedouble;
+      shapes[num_shapes].g.line.start.y = x->next->next->valuedouble;
       shapes[num_shapes].g.line.end.x = x2->valuedouble;
-      shapes[num_shapes].g.line.end.y = x2->next->valuedouble;
-      shapes[num_shapes].g.line.end.z = x2->next->next->valuedouble;
+      shapes[num_shapes].g.line.end.z = x2->next->valuedouble;
+      shapes[num_shapes].g.line.end.y = x2->next->next->valuedouble;
       num_shapes++;
       shape_count++;
     }
